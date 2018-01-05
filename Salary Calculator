@@ -1,0 +1,25 @@
+def wages():
+    position = input("Position;")
+    if position=='driver':
+        perDay=50
+    elif position=='assistant':
+        perDay=40
+    elif position=='cashier':
+        perDay=30
+    position=int(perDay)*6
+
+    absent=input("Days Absent;")
+    absent=perDay*int(absent)
+
+    overtime=input("Overtime;")
+    overtime=position*int(overtime)
+
+    employee=input("Name;")
+    datePaid=input("Date;")
+    salary=position-absent+overtime
+
+
+    print("Name;%s, Date;%s"%(str(employee),str(datePaid)))
+    print("Amount Paid;",int(salary))
+
+wages()
